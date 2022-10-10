@@ -6,15 +6,20 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const URI = process.env.DATABASE_URI;
 const PORT = process.env.PORT
+const Comment = require('./models/Comments')
 
 
 //middleware
 app.use(cors());
 app.use(express.json());
 
+
+//Routes
+
 app.get('/', (req, rese) => {
     rese.send("Welcome Home")
 })
+
 
 
 
